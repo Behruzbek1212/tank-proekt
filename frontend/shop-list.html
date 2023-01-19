@@ -1,0 +1,1215 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+{% include 'details/header.html' %}
+
+		<!-- *************************************
+		*********** Begin body inner ************* 
+		************************************** -->
+		<main id="body-inner">
+
+			<!-- Begin page transition (do not remove!!!) 
+			=========================== -->
+			<div id="page-transition">
+				<div class="ptr-overlay"></div>
+				<div class="ptr-preloader">
+					<div class="ptr-prel-content">
+						<!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
+						<img src="{% static 'img/logo-light.png' %}" class="ptr-prel-image tt-logo-light" alt="Logo">
+					</div> <!-- /.ptr-prel-content -->
+				</div> <!-- /.ptr-preloader -->
+			</div>
+			<!-- End page transition -->
+
+			<!-- Begin magic cursor 
+			======================== -->
+			<div id="magic-cursor">
+				<div id="ball"></div>
+			</div>
+			<!-- End magic cursor -->
+
+			<!-- Begin noise background -->
+			<div class="bg-noise"></div>
+			<!-- End noise background --> 
+
+
+			<!-- *****************************************
+			*********** Begin scroll container *********** 
+			****************************************** -->
+			<div id="scroll-container"> 
+				
+				<!-- ===================
+				///// Begin header /////
+				========================
+				* Use class "tt-header-fixed" to set header to fixed position.
+				-->
+
+
+				
+				<!-- *************************************
+				*********** Begin content wrap *********** 
+				************************************** -->
+				<div id="content-wrap">
+
+					
+					<!-- ========================
+					///// Begin page header /////
+					============================= 
+					* Use class "ph-full" to enable fullscreen size.
+					* Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
+					* Use class "ph-center" to enable content center position.
+					* Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
+					* Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
+					* Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
+					* Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
+					* Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
+					* Use class "ph-content-parallax" to enable content parallax.
+					* Use class "ph-stroke" to enable caption title stroke style.
+					-->
+					<div id="page-header" class="ph-cap-lg ph-center ph-image-cropped ph-image-cover-4 ph-content-parallax">
+						<div class="page-header-inner tt-wrap">
+
+							<!-- Begin page header image 
+							============================= -->
+							<!-- <div class="ph-image">
+								<div class="ph-image-inner">
+									<img src="img/page-header/ph-2.jpg" alt="Image">
+								</div>
+							</div> -->
+							<!-- End page header image -->
+
+							<!-- Begin page header caption
+							=============================== 
+							Use class "max-width-*" to set caption max width if needed. For example "max-width-1000". More info about helper classes can be found in the file "helper.css".
+							-->
+							<div class="ph-caption">
+								<h1 class="ph-caption-title ph-appear">Shop</h1>
+								<div class="ph-caption-title-ghost ph-appear">Shop</div>
+								<div class="ph-caption-subtitle ph-appear">Premium Mockups</div>
+							</div> 
+							<!-- End page header caption -->
+
+						</div> <!-- /.page-header-inner -->
+
+						<!-- Begin scroll down circle (you can change "data-offset" to set scroll top offset) 
+						============================== -->
+						<a href="#page-content" class="scroll-down-circle" data-offset="30">
+							<div class="sdc-inner ph-appear">
+								<div class="sdc-icon"><i class="fas fa-chevron-down"></i></div>
+								<svg viewBox="0 0 500 500">
+									<defs>
+										<path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle"></path>
+									</defs>
+									<text dy="30">
+										<textPath xlink:href="#textcircle">Scroll down - Scroll down -</textPath>
+									</text>
+								</svg>
+							</div> <!-- /.sdc-inner -->
+						</a>
+						<!-- End scroll down circle -->
+
+						<!-- Begin made with love 
+						========================== -->
+						<div class="made-with-love ph-appear">
+							<div class="mwl-inner">
+								<div class="mwl-text">Made with</div>
+								<div class="mwl-icon"><i class="far fa-heart"></i></div>
+							</div>
+						</div>
+						<!-- End made with love -->
+						
+					</div>
+					<!-- End page header -->
+
+
+					<!-- *************************************
+					*********** Begin page content *********** 
+					************************************** -->
+					<div id="page-content">
+
+						<!-- =======================
+						///// Begin tt-section /////
+						============================ 
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+						<div class="tt-section no-padding-top">
+							<div class="tt-section-inner tt-wrap max-width-1400">
+
+								<!-- Begin shop grid (works combined with tt-Ggrid!)
+								===================== 
+								* Use class "ttp-fixed-height" or "ttp-fixed-height-portrait" to enable product fixed heigt (images will be cropped!).
+								* Use class "ttp-info-inside" to change product info position.
+								* Hint: For better user experience, use images with the same dimensions.
+								--> 
+								<div id="shop-grid" class="ttp-fixed-height">
+
+									<!-- Begin tt-Grid
+									=================== 
+									* Use class "ttgr-layout-2", "ttgr-layout-3", "ttgr-layout-4" to set grid layout (columns).
+									* Use class "ttgr-gap-1", "ttgr-gap-2", "ttgr-gap-3", "ttgr-gap-4", "ttgr-gap-5" or "ttgr-gap-6" to add space between items.
+									-->
+									<div class="tt-grid ttgr-layout-3 ttgr-gap-3">
+
+										<!-- Begin tt-Ggrid top content 
+										================================ -->
+										<div class="tt-grid-top">
+
+											<!-- Begin shop grid header 
+											============================ -->
+											<div class="shop-grid-header">
+												<div class="tt-row tt-no-gutters">
+													<div class="tt-col-md-6">
+														<div class="shop-grid-count">Showing 9 of 36 products</div>
+													</div> <!-- /.tt-col -->
+
+													<div class="tt-col-md-6">
+
+														<!-- Begin shop grid toolbox 
+														============================= -->
+														<div class="shop-grid-toolbox">
+
+															<!-- Begin shop grid per page (Note: for design purposes only!)
+															==============================
+															* Use class "tt-form-filled" or "tt-form-minimal" to change form style.
+															-->
+															<form class="shop-grid-per-page tt-form-minimal shg-toolbox-item">
+																<div class="tt-form-group">
+																	<label>Show:</label>
+																	<select name="orderby" class="tt-form-control" aria-label="Shop order">
+																		<option value="9" selected>9</option>
+																		<option value="12">18</option>
+																		<option value="15">36</option>
+																		<option value="all">All</option>
+																	</select>
+																</div>
+															</form>
+															<!-- End shop grid per page -->
+
+															<!-- Begin shop grid ordering (Note: for design purposes only!)
+															==============================
+															* Use class "tt-form-filled" or "tt-form-minimal" to change form style.
+															-->
+															<form class="shop-grid-ordering tt-form-minimal shg-toolbox-item">
+																<label class="sgpp-mobile-label">Sort:</label>
+																<div class="tt-form-group">
+																	<select name="orderby" class="tt-form-control" aria-label="Shop order">
+																		<option value="default" selected>Default sorting</option>
+																		<option value="popularity">Sort by popularity</option>
+																		<option value="rating">Sort by average rating</option>
+																		<option value="date">Sort by latest</option>
+																		<option value="price-incr">Sort by price: low to high</option>
+																		<option value="price-desc">Sort by price: high to low</option>
+																	</select>
+																</div>
+															</form>
+															<!-- End shop grid ordering -->
+
+														</div>
+														<!-- End shop grid toolbox -->
+
+													</div> <!-- /.tt-col -->
+												</div> <!-- /.tt-row -->
+											</div>
+											<!-- End tt-Grid top content -->
+
+										</div>
+										<!-- End shop grid header -->
+
+
+										<!-- Begin tt-Grid items wrap 
+										============================== -->
+										<div class="tt-grid-items-wrap">
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-1/product-1-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+																
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-1/product-1-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<!-- <div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<div class="pr-padge pr-new-padge" title="New product">New</div>
+																	<div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div>
+																</div> -->
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Dash - Branding Mockup Templates">Dash - Branding Mockup Templates</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<bdi>$25.00</bdi>
+																	<!-- <ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del> -->
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-2/product-2-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-2/product-2-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<!-- <div class="pr-padge pr-new-padge" title="New product">New</div> -->
+																	<!-- <div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div> -->
+																</div>
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Barbershop - Branding Mockups">Barbershop - Branding Mockups</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<!-- <bdi>$25.00</bdi> -->
+																	<ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del>
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<!-- <a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a> -->
+																	<a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a>
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg'' %}" data-src="{% static 'img/shop/grid/product-3/product-3-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-3/product-3-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<!-- <div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<div class="pr-padge pr-new-padge" title="New product">New</div>
+																	<div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div>
+																</div> -->
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Blackstone - Branding Mockup Kit">Blackstone - Branding Mockup Kit</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<bdi>$25.00</bdi>
+																	<!-- <ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del> -->
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-4/product-4-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-4/product-4-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<!-- <div class="pr-padge pr-new-padge" title="New product">New</div> -->
+																	<!-- <div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div> -->
+																</div>
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Farsight - Print Mockup Kit">Farsight - Print Mockup Kit</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<!-- <bdi>$25.00</bdi> -->
+																	<ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del>
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<!-- <a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a> -->
+																	<a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a>
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-5/product-5-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-5/product-5-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<!-- <div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<div class="pr-padge pr-new-padge" title="New product">New</div>
+																	<div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div>
+																</div> -->
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Nude - Print Mockup Kit">Nude - Print Mockup Kit</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<bdi>$25.00</bdi>
+																	<!-- <ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del> -->
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-6/product-6-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-6/product-6-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<!-- <div class="pr-padge pr-new-padge" title="New product">New</div> -->
+																	<!-- <div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div> -->
+																</div>
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Android - Smartphone Mockups vol.1">Android - Smartphone Mockups vol.1</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<!-- <bdi>$25.00</bdi> -->
+																	<ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del>
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-7/product-7-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-7/product-7-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<!-- <div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<div class="pr-padge pr-new-padge" title="New product">New</div>
+																	<div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div>
+																</div> -->
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Android - Smartphone Mockups vol.2">Android - Smartphone Mockups vol.2</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<bdi>$25.00</bdi>
+																	<!-- <ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del> -->
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-8/product-8-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-8/product-8-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<!-- <div class="pr-padge pr-new-padge" title="New product">New</div> -->
+																	<!-- <div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div> -->
+																</div>
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Forma - Branding Mockup Templates">Forma - Branding Mockup Templates</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<!-- <bdi>$25.00</bdi> -->
+																	<ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del>
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<!-- <a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a> -->
+																	<a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a>
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item">
+												<div class="ttgr-item-inner">
+
+													<!-- Begin tt-Product 
+													====================== -->
+													<div class="tt-product">
+														<div class="tt-product-image-holder">
+															<a href="shop-single.html" class="tt-product-image-wrap" data-cursor="View<br>Product">
+																<figure class="tt-product-image">
+																	<img class="anim-zoomin tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-9/product-9-1.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-image -->
+
+																<figure class="tt-product-hover-image">
+																	<img class="tt-lazy" src="{% static 'img/shop/shop-low-qlt-thumb.jpg' %}" data-src="{% static 'img/shop/grid/product-9/product-9-2.jpg' %}" alt="image" />
+																</figure> <!-- /.tt-product-hover-image -->
+
+																<!-- <div class="tt-product-padges">
+																	<div class="pr-padge pr-sale-padge" title="Sale">-16%</div>
+																	<div class="pr-padge pr-new-padge" title="New product">New</div>
+																	<div class="pr-padge pr-hot-padge" title="Featured product">Hot!</div>
+																</div> -->
+
+																<!-- <div class="tt-product-out-of-stock">Out of Stock</div> -->
+															</a> <!-- /.tt-product-image-wrap -->
+
+															<div class="tt-product-additional-buttons">
+																<div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-wishlist-btn" title="Add to wishlist"><span><i class="far fa-heart"></i></span></a>
+																	<a href="shop-wishlist.html" class="tt-pab-btn tt-add-to-wishlist-btn-active" title="Browse wishlist"><span><i class="fas fa-heart"></i></span></a>
+																</div>
+
+																<!-- <div class="tt-pr-addit-btn-wrap">
+																	<a href="#" class="tt-pab-btn tt-add-to-compare-btn" title="Compare"><span><i class="fas fa-retweet"></i></span></a>
+																	<a href="" class="tt-pab-btn tt-add-to-compare-btn-active" title="Browse compare list"><span><i class="fas fa-check"></i></span></a>
+																</div> -->
+
+																<!-- <a href="#" class="tt-pab-btn" title="Quick view"><i class="fas fa-search-plus"></i></a> -->
+
+															</div> <!-- /.tt-product-additional-buttons -->
+														</div> <!-- /.tt-product-image-holder -->
+
+														<div class="tt-product-info">
+															<!-- <div class="tt-product-categories">
+																<a href="" class="tt-product-category">Mockups</a>
+															</div> -->
+
+															<h3 class="tt-product-title"><a href="shop-single.html" title="Idenix - Branding Mockup Templates">Idenix - Branding Mockup Templates</a></h3>
+
+															<!-- <div class="tt-product-rating">
+																<div class="tt-product-rating-stars">
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="fas fa-star"></i>
+																	<i class="far fa-star"></i>
+																	<i class="far fa-star"></i>
+																</div>
+															</div> -->
+
+															<div class="tt-pi-price-btn-wrap">
+																<div class="tt-product-price">
+																	<bdi>$25.00</bdi>
+																	<!-- <ins class="pp-current-price"><bdi>$21.00</bdi></ins>
+																	<del class="pp-old-price"><bdi>$25.00</bdi></del> -->
+																</div> <!-- /.tt-product-price -->
+
+																<div class="tt-product-buttons">
+																	<a href="#" class="tt-product-btn tt-product-adc-btn"><span>Add to Cart</span></a>
+																	<!-- <a href="shop-single.html" class="tt-product-btn tt-product-sel-opt-btn"><span>Select Options</span></a> -->
+																</div> <!-- /.tt-product-buttons -->
+															</div> <!-- /.tt-pi-price-btn-wrap -->
+														</div> <!-- /.tt-product-info -->
+													</div>
+													<!-- End tt-Product -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+
+										</div>
+										<!-- End tt-Grid items wrap  -->
+
+									</div>
+									<!-- End tt-Grid -->
+
+								</div>
+								<!-- End shop grid -->
+
+
+								<!-- Begin tt-pagination (uncomment below code if you want to use pagination)
+								========================= 
+								* Use class "tt-pagin-center" to align center.
+								-->
+								<div class="tt-pagination tt-pagin-center anim-fadeinup">
+									<div class="tt-pagin-prev">
+										<a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>
+									</div>
+									<div class="tt-pagin-numbers">
+										<a href="#0" class="tt-pagin-item magnetic-item active">1</a>
+										<a href="" class="tt-pagin-item magnetic-item">2</a>
+										<a href="" class="tt-pagin-item magnetic-item">3</a>
+										<a href="" class="tt-pagin-item magnetic-item">4</a>
+									</div>
+									<div class="tt-pagin-next">
+										<a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div>
+								<!-- End tt-pagination -->
+
+
+								<!-- Begin sliding sidebar 
+								=========================== 
+								* Use class "tt-ss-right" to align sidebar to right.
+								-->
+								<div class="tt-sliding-sidebar-wrap">
+									<div class="tt-sliding-sidebar">
+										<div class="tt-sliding-sidebar-inner">
+
+											<!-- Begin sidebar widget -->
+											<div class="sidebar-widget sidebar-categories">
+												<h3 class="sidebar-heading">Categories</h3>
+												<ul class="list-unstyled">
+													<li><a href="blog-archive.html">Branding <span title="Entries in this category">26</span></a></li>
+													<li><a href="blog-archive.html">Packaging <span title="Entries in this category">12</span></a></li>
+													<li><a href="blog-archive.html">Print <span title="Entries in this category">19</span></a></li>
+													<li><a href="blog-archive.html">Mobile <span title="Entries in this category">31</span></a></li>
+												</ul>
+											</div>
+											<!-- End sidebar widget -->
+
+
+											<!-- Begin shop filter form (Note: the shop filter widgets is for design purposes only!) 
+											============================= 
+											* Use class "tt-form-filled" or "tt-form-minimal" to change form style.
+											-->
+											<form class="shop-filter-form tt-form-minimal">
+
+												<!-- Begin sidebar shop widget. Add class "hidden" to hide filter widget by default -->
+												<div class="sidebar-widget shop-filter-widget sidebar-price-range">
+													<h3 class="sidebar-heading">Price</h3>
+													<div class="shop-fw-caret hide-cursor"></div>
+													<div class="shop-filter-widget-content">
+														<div class="shop-fwc-inner tt-custom-scrollbar tt-overflow">
+															<div class="shop-fw-price-range">
+																<div class="shop-fw-price-box">
+																	<span class="shop-fw-price-box-currency">$</span>
+																	<input type="number" class="tt-form-control" name="min-price" min="1" max="150" value="1" placeholder="" title="Enter price as a whole number">
+																</div>
+																<span class="shop-fw-price-range-separator">-</span>
+																<div class="shop-fw-price-box">
+																	<span class="shop-fw-price-box-currency">$</span>
+																	<input type="number" class="tt-form-control" name="max-price" min="1" max="150" value="150" placeholder="" title="Enter price as a whole number">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End sidebar widget -->
+
+												<!-- Begin sidebar shop widget. Add class "hidden" to hide filter widget by default -->
+												<div class="sidebar-widget shop-filter-widget sidebar-check-list">
+													<h3 class="sidebar-heading">License</h3>
+													<div class="shop-fw-caret hide-cursor"></div>
+													<div class="shop-filter-widget-content">
+														<div class="shop-fwc-inner tt-custom-scrollbar tt-overflow">
+															<div class="tt-form-check">
+																<input type="checkbox" name="regular-license" id="10048763">
+																<label for="10048763">Regular license <span>(6)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="extended-license" id="67758399">
+																<label for="67758399">Extended license <span>(9)</span></label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End sidebar widget -->
+
+												<!-- Begin sidebar shop widget. Add class "hidden" to hide filter widget by default -->
+												<div class="sidebar-widget shop-filter-widget sidebar-check-list">
+													<h3 class="sidebar-heading">On Sale</h3>
+													<div class="shop-fw-caret hide-cursor"></div>
+													<div class="shop-filter-widget-content">
+														<div class="shop-fwc-inner tt-custom-scrollbar tt-overflow">
+															<div class="tt-form-check">
+																<input type="checkbox" name="on-sale-yes" id="30095224">
+																<label for="30095224">Yes <span>(4)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="on-sale-no" id="33984400">
+																<label for="33984400">No <span>(32)</span></label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End sidebar widget -->
+
+												<!-- Begin sidebar shop widget. Add class "hidden" to hide filter widget by default -->
+												<!-- <div class="sidebar-widget shop-filter-widget sidebar-radio-list">
+													<h3 class="sidebar-heading">Rating</h3>
+													<div class="shop-fw-caret hide-cursor"></div>
+													<div class="shop-filter-widget-content">
+														<div class="shop-fwc-inner tt-custom-scrollbar tt-overflow">
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="77223990" checked>
+																<label for="77223990">Show all <span>(36)</span></label>
+															</div>
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="62239901">
+																<label for="62239901">5 stars and higher <span>(21)</span></label>
+															</div>
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="66758556">
+																<label for="66758556">4 stars and higher <span>(11)</span></label>
+															</div>
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="00022348">
+																<label for="00022348">3 stars and higher <span>(2)</span></label>
+															</div>
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="10649046">
+																<label for="10649046">2 stars and higher <span>(1)</span></label>
+															</div>
+															<div class="tt-form-radio">
+																<input type="radio" name="rating" id="53396753">
+																<label for="53396753">1 star and higher <span>(1)</span></label>
+															</div>
+														</div>
+													</div>
+												</div> -->
+												<!-- End sidebar widget -->
+
+												<!-- Begin sidebar shop widget. Add class "hidden" to hide filter widget by default -->
+												<div class="sidebar-widget shop-filter-widget sidebar-check-list">
+													<h3 class="sidebar-heading">Tags</h3>
+													<div class="shop-fw-caret hide-cursor"></div>
+													<div class="shop-filter-widget-content">
+														<div class="shop-fwc-inner tt-custom-scrollbar tt-overflow">
+															<div class="tt-form-check">
+																<input type="checkbox" name="tag-1" id="44873990">
+																<label for="44873990">#mockup <span>(36)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="tag-2" id="11003092">
+																<label for="11003092">#artwork <span>(12)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="tag-3" id="67758493">
+																<label for="67758493">#design <span>(9)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="tag-4" id="02759776">
+																<label for="02759776">#creative <span>(16)</span></label>
+															</div>
+															<div class="tt-form-check">
+																<input type="checkbox" name="tag-5" id="40093345">
+																<label for="40093345">#branding <span>(4)</span></label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- End sidebar widget -->
+
+												<div class="tt-btn tt-btn-primary tt-btn-block shop-filter-submit-btn">
+													<button type="submit" data-hover="Filter">Filter</button>
+												</div>
+
+											</form>
+											<!-- End shop filter form -->
+
+
+											<!-- Begin sidebar widget -->
+											<!-- <div class="sidebar-widget sidebar-tags">
+												<h3 class="sidebar-heading">Tags</h3>
+												<div class="sidebar-tags-list">
+													<ul>
+														<li><a href="">#portfolio</a></li>
+														<li><a href="">#multipurpose</a></li>
+														<li><a href="">#minimal</a></li>
+														<li><a href="">#agency</a></li>
+														<li><a href="">#creatives</a></li>
+														<li><a href="">#freelancers</a></li>
+														<li><a href="">#design</a></li>
+														<li><a href="">#bootstrap</a></li>
+														<li><a href="">#responsive</a></li>
+														<li><a href="">#simple</a></li>
+														<li><a href="">#creative</a></li>
+														<li><a href="">#blog</a></li>
+														<li><a href="">#wordpress</a></li>
+														<li><a href="">#black &amp; white</a></li>
+													</ul>
+												</div>
+											</div> -->
+											<!-- End sidebar widget -->
+
+										</div> <!-- /.tt-sliding-sidebar-inner -->
+									</div> <!-- /.tt-sliding-sidebar -->
+
+									<!-- Begin sliding sidebar trigger -->
+									<div class="tt-sliding-sidebar-trigger">
+										<span class="tt-ss-icon"><i class="fas fa-align-justify"></i></span>
+										<span class="tt-ss-icon-close"><i class="fas fa-times"></i></span>
+									</div>
+									<!-- End sliding sidebar trigger -->
+
+									<!-- Close overlay -->
+									<div class="tt-sliding-sidebar-close cursor-close"></div>
+
+								</div> 
+								<!-- End sliding sidebar -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+						<!-- End tt-section -->
+
+
+					</div>
+					<!-- End page content -->
+					
+
+					<!-- ======================
+					///// Begin tt-footer /////
+					=========================== -->
+	{% include 'details/footer.html' %}
+					<!-- End tt-footer -->
+
+
+				</div>
+				<!-- End content wrap -->
+
+			</div>
+			<!-- End scroll container -->
+
+
+		</main>
+		<!-- End body inner -->
+
+
+        
+
+		<!-- ====================
+		///// Scripts below /////
+		===================== -->
+
+		<!-- Core JS -->
+
+
+	{% endblock content %}
